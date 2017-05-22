@@ -1,4 +1,3 @@
-<?php session start(); ?>
 console.log('connected with main.js');
 
 var ticketsubmit = document.querySelector('.ticketsubmit');
@@ -93,10 +92,11 @@ function seasonchecker (seasonticket, totalprice) {
         finalprice = totalprice;
         console.log(finalprice);
     }
-    proceedtopaymentbutton = document.createElement('button');
+    proceedtopaymentbutton = document.createElement('a');
+    proceedtopaymentbutton.href="paymentpage.php";
     proceedtopaymentbutton.innerHTML = 'Proceed to Payment?';
     printtickethere.appendChild(proceedtopaymentbutton);
-    proceedtopaymentbutton.addEventListener('click', openpaymentform);
+    // proceedtopaymentbutton.addEventListener('click', openpaymentform);
 };
 
     

@@ -95,7 +95,7 @@ function seasonchecker (seasonticket, totalprice) {
     proceedtopaymentbutton.href="paymentpage.php";
     proceedtopaymentbutton.innerHTML = 'Proceed to Payment?';
     printtickethere.appendChild(proceedtopaymentbutton);
-    proceedtopaymentbutton.addEventListener('click', openpaymentform);
+    // proceedtopaymentbutton.addEventListener('click', openpaymentform);
 };
 
     

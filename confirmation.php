@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,14 +12,25 @@
     </head>
     <body>
         <?php require_once "nav.php"; ?>
-        <img class = 'img-responsive' src = 'images/oldtraffordmain.jpg'>
-            <div id = 'indexmain' class = 'row'>
-                <div class = 'col-sm-3 cola'><a href = 'ticketpurchase.php'><h1>Buy Tickets Here</h1></a></div>
-                <div class = 'col-sm-9 cola'><img src = 'images/footballart.jpg' class = 'img-responsive'></div>
+            <div class="confirmationtext">
+                <h3>Payment Received</h3>
+                <h3>Here is your receipt</h3>
+                <div class="personaldetails">
+                    <?php echo $_SESSION['fname']; ?><br>
+                    <?php echo $_SESSION['lname']; ?><br>
+                    <?php echo $_SESSION['email']; ?><br>
+                    <?php echo $_SESSION['phonenumber']; ?><br>
+                    <?php echo $_SESSION['ccardnum']; ?><br>
+                    <?php echo $_SESSION['ticketid']; ?>
+                </div>
             </div>
-        <?php require_once "footer.php";?>
+
+<?php require_once "footer.php";?>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src = 'main.js'></script>
     </body>
 </html>
+
+
+

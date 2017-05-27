@@ -77,3 +77,16 @@ footer {
 #editthispara {
     font-size: 50px;
 }
+
+.confirmationtext h3{
+    font-size: 40px;
+    color: yellow;
+    margin:30px;
+    text-align:center;
+}
+.personaldetails {
+    font-size: 30px;
+    color: cyan;
+    margin:30px;
+    text-align:center;
+}

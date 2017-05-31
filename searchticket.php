@@ -17,7 +17,7 @@
             </label>
             <input type="submit" value="Search it">
         </form>
-        
+        <button id="fetchteams">Teams</button>
         <?php
 $connection = mysqli_connect('localhost','root','','soccerticketdb');
 $output='';
@@ -46,7 +46,10 @@ if(isset($_GET['ticketidinput'])){
     }
 }
 ?>﻿
-          
+
+
+
+        </script>
             
       <?php require_once "footer.php";?>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

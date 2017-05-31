@@ -102,3 +102,4 @@ function seasonchecker (seasonticket, totalprice) {
     function openpaymentform() {
         alert('Lets proceed to payment yo');    
     }
+

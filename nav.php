@@ -14,7 +14,7 @@
         <li><a href="index.php">Home</a></li>
         <li><a href="searchticket.php">Lookup Ticket</a></li>
         <li><a href="ticketpurchase.php">Purchase Tickets</a></li>
-        
+        <li><a href="teamdetails.php">View Teams</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -24,6 +24,7 @@
             <li><a href="index.php">Home</a></li>
             <li><a href="searchticket.php">Lookup Ticket</a></li>
             <li><a href="ticketpurchase.php">Purchase Tickets</a></li>
+            <li><a href="teamdetails.php">View Teams</a></li>
           </ul>
         </li>
       </ul>

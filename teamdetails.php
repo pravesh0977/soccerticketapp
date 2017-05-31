@@ -13,6 +13,8 @@
            <p>Please click here to see all the Premier League Teams</p>
             <button id="fetchteamsbutton">See Teams</button>
             <div class="putteamshere"></div>
+            <div class="putplayershere"></div>
+            <div class="clearingdiv"></div>
             
       
       
@@ -22,6 +24,7 @@
            
         const fetchteamsbutton = document.getElementById('fetchteamsbutton');
         const putteamshere = document.querySelector('.putteamshere');
+        const putplayershere = document.querySelector('.putplayershere');
         fetchteamsbutton.addEventListener('click', fetchstuffyo);
          
         function fetchstuffyo (){
@@ -65,13 +68,24 @@
         return response.json();
       }).then((fullsquad) => {
         console.log(fullsquad);
-})
-}
-                
-                        
+        renderplayers(fullsquad);
                 })
+            }
+            })
             putteamshere.appendChild(unorderteams);
            }
+        
+        function renderplayers(fullsquad) {
+            unorderplayers = document.createElement('ul');
+            fullsquad.players.map((elem)=>{
+                let eachplayer = document.createElement('div');
+                eachplayer.setAttribute('class', 'eachplayer');
+                let listofplayers = document.createElement('li');
+                listofplayers.innerHTML = elem.name +"<br>" + "Position : " + elem.position + "<br>" + "Nationality : " + elem.nationality +"<br>" + "Jersey Number : " + elem.jerseyNumber +"<br>" + "Contract Until : " + elem.contractUntil +"<br>" + "Date of Birth : " + elem.dateOfBirth;
+                unorderplayers.appendChild(listofplayers);
+            })
+            putplayershere.appendChild(unorderplayers);
+        }
         </script>          
                
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

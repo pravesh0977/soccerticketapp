@@ -99,7 +99,29 @@ footer {
     font-size: 24px;
     color:aquamarine;
 }
+.putteamshere {
+    float:left;
+    width:40%;
+    
+}
 .cresturl {
     height:200px;
     width:200px;
+}
+.putplayershere li {
+    font-size: 24px;
+    color:antiquewhite;
+}
+.putplayershere {
+    background: red;
+    width: 40%;
+    float:right;
+    height: 500px;
+    overflow: scroll;
+}
+.clearingdiv {
+    clear:both;
+}
+.eachplayer {
+    margin: 20px;
 }

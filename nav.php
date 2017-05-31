@@ -12,7 +12,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="index.php">Home</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="searchticket.php">Lookup Ticket</a></li>
         <li><a href="ticketpurchase.php">Purchase Tickets</a></li>
         
       </ul>
@@ -22,7 +22,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="background-color: black">More <span class="caret"></span></a>
           <ul class="dropdown-menu" style="background-color: black">
             <li><a href="index.php">Home</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="searchticket.php">Lookup Ticket</a></li>
             <li><a href="ticketpurchase.php">Purchase Tickets</a></li>
           </ul>
         </li>

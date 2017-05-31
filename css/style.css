@@ -90,3 +90,8 @@ footer {
     margin:30px;
     text-align:center;
 }
+.resultdiv {
+    font-size: 40px;
+    color: red;
+    margin: 40px;
+}

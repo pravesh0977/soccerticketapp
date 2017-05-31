@@ -1,4 +1,4 @@
-<? session_start(); ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,12 +11,43 @@
     </head>
     <body>
       <?php require_once "nav.php";?>
-        <form method="post" action="searchticket.php">
-            <label>Search for the username
-                <input type="text" name="fname">
+        <form method="GET" action="searchticket.php">
+            <label style="font-size:30px">Search for your ticket
+                <input type="text" name="ticketidinput">
             </label>
-            <input type="submit" name="submit" value="Search">
-            </form>
+            <input type="submit" value="Search it">
+        </form>
+        
+        <?php
+$connection = mysqli_connect('localhost','root','','soccerticketdb');
+$output='';
+if(isset($_GET['ticketidinput'])){
+    $searchkey= $_GET['ticketidinput'];
+    $searchkey=preg_replace("#[^0-9a-z]#i", "", $searchkey);
+
+    $query = mysqli_query($connection,"SELECT * FROM soccertable WHERE ticketid LIKE '%$searchkey%'") or die("Could not search!");
+    $count = mysqli_num_rows($query);
+
+    if($count == 0){
+        $output="There was no search result!";
+    }
+    else{
+        while($row=mysqli_fetch_array($query)){
+            $fname=$row['fname'];
+            $lname=$row['lname'];
+            $phonenumber=$row['phonenumber'];
+            $email=$row['email'];
+
+            $output ='<div class="resultdiv">' .$fname. ' ' .$lname . '<br>' . 'Phone Number : ' . $phonenumber . '<br>' . 'Email : '.$email .'</div>';
+
+            echo $output;
+
+        }
+    }
+}
+?>﻿
+          
+            
       <?php require_once "footer.php";?>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>

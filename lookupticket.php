@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php mysqli_connect("localhost", "root", "root", "soccerticketdb") or die ('not found maera'); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,25 +12,14 @@
     </head>
     <body>
         <?php require_once "nav.php"; ?>
-            <div class="confirmationtext">
-                <h3>Payment Received</h3>
-                <h3>Here is your receipt</h3>
-                <div class="personaldetails">
-                    <?php echo "Name : " . $_SESSION['fname']; ?>
-                    <?php echo $_SESSION['lname']; ?><br>
-                    <?php echo "Email : " . $_SESSION['email']; ?><br>
-                    <?php echo "Phone Number : " . $_SESSION['phonenumber']; ?><br>
-                    <?php echo "Credit Card Number : " . $_SESSION['ccardnum']; ?><br>
-                    <?php echo 'This is your ticket number : ' . $_SESSION['ticketid']; ?>
-                </div>
-            </div>
-
+            <form class="lookupform" action="lookupticket.php" method="post">
+                <label>Please enter your Ticket Number</label>
+                <input type="text" name="lookuper">
+                <input type="submit" name="submitlookup" value="search">
+            </form>
 <?php require_once "footer.php";?>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src = 'main.js'></script>
     </body>
 </html>
-
-
-

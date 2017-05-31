@@ -12,7 +12,7 @@ $_SESSION['email'] = $_POST['email'];
 $_SESSION['phonenumber'] = $_POST['phonenumber'];
 $_SESSION['ccardnum'] = $_POST['ccardnum'];
 $_SESSION['ticketid'] = $ticketid;
-$connection = mysqli_connect("localhost", "root", "root", "soccerticketdb");
+$connection = mysqli_connect("localhost", "root", "", "soccerticketdb");
 $query="INSERT INTO soccertable (fname, lname, phonenumber, ccardnum, email, ticketid) VALUES ('$fname', '$lname', '$phonenumber', '$ccardnum', '$email', '$ticketid');";
 mysqli_query($connection, $query);
 
